@@ -14,4 +14,6 @@ An intelligent waste classification system using YOLOv8.
 4. Install dependencies: `pip install opencv-python ultralytics numpy`
 
 ## Current Status
+
 The system successfully identifies aluminum cans (often classified as 'vase' or 'cup' due to model constraints) and maps them to the **RECYCLE** bin.
+Use roboflow to train YOLO (from Rica)

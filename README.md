@@ -46,3 +46,6 @@ To comply with the project guidelines for remote management, ensure SSH is enabl
 Install the necessary dependencies on the Raspberry Pi:
 ```bash
 pip install opencv-python numpy roboflow
+
+# Project Presentation
+

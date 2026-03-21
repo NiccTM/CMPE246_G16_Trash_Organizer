@@ -47,5 +47,14 @@ Install the necessary dependencies on the Raspberry Pi:
 
 `pip install opencv-python numpy roboflow`
 
+
+
+
+
+
+
+
+
+
 # Presentation Information
 

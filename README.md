@@ -76,16 +76,15 @@ Bin categories match the UBC campus **"Sort it Out"** waste stations:
 
 1. Power off Pi, insert ribbon cable into **CAM0** (blue stripe faces AWAY from board edge).
 2. Edit `/boot/firmware/config.txt`:
-   ```
+```
    camera_auto_detect=0
    dtoverlay=imx219,cam0
-   ```
+```
 3. Reboot and verify: `rpicam-hello --list-cameras`
 
 ### I2C / LCD Setup
-
 ```bash
-sudo raspi-config   # Interface Options → I2C → Yes
+sudo raspi-config   # Interface Options -> I2C -> Yes
 sudo reboot
 sudo apt-get install -y python3-smbus i2c-tools
 sudo i2cdetect -y 1  # Should show 0x27 or 0x3f
@@ -94,7 +93,6 @@ sudo i2cdetect -y 1  # Should show 0x27 or 0x3f
 If your LCD shows `0x3f` instead of `0x27`, change `LCD_I2C_ADDR` in the script.
 
 ### Install Dependencies
-
 ```bash
 pip install -r requirements.txt --break-system-packages
 ```
@@ -102,13 +100,11 @@ pip install -r requirements.txt --break-system-packages
 ### Roboflow API Key
 
 Create a `.env` file next to the script:
-
 ```
 ROBOFLOW_API_KEY=your_key_here
 ```
 
 ### Run
-
 ```bash
 python3 ecosort_scanner_V2.0.py
 ```
@@ -147,10 +143,6 @@ Auto-scan triggers automatically when an object is held still for ~1.5 seconds.
 | V2.0 | 2026-03-21 | Major rewrite: background subtraction, auto-scan, 5-bin UBC mapping, I2C LCD, adaptive background, co-occurrence merging, confidence floor, lighting check, fullscreen overlay, stats screen |
 
 ---
-
-## About
-
-An AI-powered waste classification system using YOLOv8 and Raspberry Pi to automate trash sorting into five streams matching UBC campus bins: Garbage, Recycling, Returnables, Compost, and E-Waste.
 
 ## License
 
